@@ -8,19 +8,19 @@ fn main() {
     args.next();
     let fasta_file = match args.next() {
         None => {
-            panic!("请传入fasta文件");
+            panic!("请指定fasta文件");
         }
         Some(f) => f,
     };
     let size = match args.next() {
         None => {
-            panic!("请kmer大小");
+            panic!("请指定kmer大小");
         }
         Some(size) => size.parse::<usize>().unwrap(),
     };
     let out = match args.next() {
         None => {
-            panic!("请传入fasta文件")
+            panic!("请指定结果文件")
         }
         Some(out) => out,
     };
